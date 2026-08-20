@@ -20,8 +20,8 @@ const t = {
     'mobile.contact': 'Contact',
 
     'hero.eyebrow': '17 YEARS OF JOURNEYS SINCE 2009',
-    'hero.h1.line1': 'Discover Uzbekistan',
-    'hero.h1.line2': 'and the world',
+    'hero.h1.line1': 'Discover',
+    'hero.h1.line2': 'Uzbekistan',
     'hero.h1.line3': 'with Mira-Lux.',
     'hero.subtitle': "Since 2009, Mira-Lux has guided travelers through Samarkand, Bukhara, Khiva and Tashkent, plus tours abroad — visas, flights, hotels, guides and transfers, all handled for you.",
     'hero.playFilm': 'PLAY FILM',
@@ -161,9 +161,9 @@ const t = {
     'mobile.contact': 'Контакты',
 
     'hero.eyebrow': '17 ЛЕТ ПУТЕШЕСТВИЙ С 2009 ГОДА',
-    'hero.h1.line1': 'Откройте Узбекистан',
-    'hero.h1.line2': 'и весь мир',
-    'hero.h1.line3': 'вместе с Mira-Lux.',
+    'hero.h1.line1': 'Откройте',
+    'hero.h1.line2': 'Узбекистан',
+    'hero.h1.line3': 'с Mira-Lux.',
     'hero.subtitle': 'С 2009 года Mira-Lux сопровождает путешественников по Самарканду, Бухаре, Хиве и Ташкенту, а также в поездках за рубеж — визы, авиабилеты, отели, гиды и трансферы берём на себя.',
     'hero.playFilm': 'СМОТРЕТЬ ВИДЕО',
 
@@ -302,8 +302,8 @@ const t = {
     'mobile.contact': 'Aloqa',
 
     'hero.eyebrow': "2009-YILDAN BERI 17 YIL SAYOHAT",
-    'hero.h1.line1': "O'zbekistonni kashf eting",
-    'hero.h1.line2': 'va butun dunyoni',
+    'hero.h1.line1': "O'zbekistonni",
+    'hero.h1.line2': 'kashf eting',
     'hero.h1.line3': 'Mira-Lux bilan.',
     'hero.subtitle': "2009-yildan beri Mira-Lux sayohatchilarni Samarqand, Buxoro, Xiva va Toshkent bo'ylab, shuningdek chet elga sayohatlarda kuzatib boradi — vizalar, chiptalar, mehmonxonalar, gidlar va transferlarni o'z zimmamizga olamiz.",
     'hero.playFilm': "VIDEONI KO'RISH",
