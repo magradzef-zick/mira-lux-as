@@ -2,8 +2,27 @@ import './style.css';
 import Lenis from 'lenis';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { LANGS, DEFAULT_LANG, applyLanguage } from './i18n.js';
 
 gsap.registerPlugin(ScrollTrigger);
+
+/* ---------------- Language ---------------- */
+let currentLang = localStorage.getItem('mira-lux-lang');
+if (!LANGS.includes(currentLang)) currentLang = DEFAULT_LANG;
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('mira-lux-lang', lang);
+  applyLanguage(lang);
+  const langCode = document.getElementById('lang-code');
+  if (langCode) langCode.textContent = lang.toUpperCase();
+}
+setLang(currentLang);
+
+const langBtn = document.getElementById('lang-btn');
+langBtn?.addEventListener('click', () => {
+  setLang(LANGS[(LANGS.indexOf(currentLang) + 1) % LANGS.length]);
+});
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const isDesktop = window.matchMedia('(min-width: 1024px)').matches;

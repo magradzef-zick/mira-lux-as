@@ -29,24 +29,24 @@
     <div class="max-w-[1600px] mx-auto px-6 md:px-10 h-[76px] flex items-center justify-between">
       <a href="#top" class="flex flex-col leading-none shrink-0" data-magnetic>
         <span class="font-display text-xl md:text-2xl tracking-[0.15em]">MIRA-LUX</span>
-        <span class="text-[9px] tracking-[0.35em] text-cream/50 mt-0.5 hidden sm:block">TRAVEL BEYOND</span>
+        <span data-i18n="brand.tagline" class="text-[9px] tracking-[0.35em] text-cream/50 mt-0.5 hidden sm:block">TRAVEL BEYOND</span>
       </a>
 
       <nav class="hidden lg:flex items-center gap-9 text-[13px] tracking-[0.08em] text-cream/80">
-        <a href="#destinations" class="nav-link">DESTINATIONS</a>
-        <a href="#experiences" class="nav-link">EXPERIENCES</a>
-        <a href="#collections" class="nav-link">COLLECTIONS</a>
-        <a href="#inspiration" class="nav-link">INSPIRATION</a>
-        <a href="#about" class="nav-link">ABOUT US</a>
-        <a href="#contact" class="nav-link">CONTACT</a>
+        <a href="#destinations" class="nav-link" data-i18n="nav.destinations">DESTINATIONS</a>
+        <a href="#experiences" class="nav-link" data-i18n="nav.experiences">EXPERIENCES</a>
+        <a href="#collections" class="nav-link" data-i18n="nav.collections">COLLECTIONS</a>
+        <a href="#inspiration" class="nav-link" data-i18n="nav.inspiration">INSPIRATION</a>
+        <a href="#about" class="nav-link" data-i18n="nav.about">ABOUT US</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.contact">CONTACT</a>
       </nav>
 
       <div class="flex items-center gap-5 shrink-0">
-        <button class="hidden md:flex items-center gap-1.5 text-[13px] text-cream/80 hover:text-cream transition-colors" data-magnetic>
+        <button id="lang-btn" class="hidden md:flex items-center gap-1.5 text-[13px] text-cream/80 hover:text-cream transition-colors" data-magnetic>
           <svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm88,104a87.61,87.61,0,0,1-3.33,24H174.16a161.79,161.79,0,0,0,0-48h38.51A87.61,87.61,0,0,1,216,128ZM102,168H154a145.72,145.72,0,0,1-26,45A145.72,145.72,0,0,1,102,168Zm-3.9-16a145.71,145.71,0,0,1,0-48h59.8a145.71,145.71,0,0,1,0,48ZM40,128a87.61,87.61,0,0,1,3.33-24H81.84a161.79,161.79,0,0,0,0,48H43.33A87.61,87.61,0,0,1,40,128ZM154,88H102a145.72,145.72,0,0,1,26-45A145.72,145.72,0,0,1,154,88Zm52.2,0H170.9a164.63,164.63,0,0,0-22.06-45.6A88.29,88.29,0,0,1,206.2,88ZM107.16,42.4A164.63,164.63,0,0,0,85.1,88H49.8A88.29,88.29,0,0,1,107.16,42.4ZM49.8,168H85.1a164.63,164.63,0,0,0,22.06,45.6A88.29,88.29,0,0,1,49.8,168Zm99,45.6A164.63,164.63,0,0,0,170.9,168h35.3A88.29,88.29,0,0,1,148.84,213.6Z"></path></svg>
-          EN
+          <span id="lang-code">RU</span>
         </button>
-        <a href="https://t.me/Miralux_travel" target="_blank" rel="noopener" class="btn-gold hidden sm:inline-flex" data-magnetic>PLAN YOUR JOURNEY</a>
+        <a href="https://t.me/Miralux_travel" target="_blank" rel="noopener" class="btn-gold hidden sm:inline-flex" data-magnetic data-i18n="nav.plan">PLAN YOUR JOURNEY</a>
         <button id="menu-btn" aria-label="Open menu" aria-expanded="false" class="lg:hidden relative w-9 h-9 flex flex-col items-center justify-center gap-[5px] z-[70]">
           <span class="burger-line"></span>
           <span class="burger-line"></span>
@@ -58,14 +58,14 @@
   <!-- Mobile menu overlay -->
   <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
     <nav class="flex flex-col gap-2">
-      <a href="#destinations" class="mobile-link">Destinations</a>
-      <a href="#experiences" class="mobile-link">Experiences</a>
-      <a href="#collections" class="mobile-link">Collections</a>
-      <a href="#inspiration" class="mobile-link">Inspiration</a>
-      <a href="#about" class="mobile-link">About Us</a>
-      <a href="#contact" class="mobile-link">Contact</a>
+      <a href="#destinations" class="mobile-link" data-i18n="mobile.destinations">Destinations</a>
+      <a href="#experiences" class="mobile-link" data-i18n="mobile.experiences">Experiences</a>
+      <a href="#collections" class="mobile-link" data-i18n="mobile.collections">Collections</a>
+      <a href="#inspiration" class="mobile-link" data-i18n="mobile.inspiration">Inspiration</a>
+      <a href="#about" class="mobile-link" data-i18n="mobile.about">About Us</a>
+      <a href="#contact" class="mobile-link" data-i18n="mobile.contact">Contact</a>
     </nav>
-    <a href="https://t.me/Miralux_travel" target="_blank" rel="noopener" class="btn-gold mt-10 self-start">PLAN YOUR JOURNEY</a>
+    <a href="https://t.me/Miralux_travel" target="_blank" rel="noopener" class="btn-gold mt-10 self-start" data-i18n="nav.plan">PLAN YOUR JOURNEY</a>
   </div>
 
   <main id="top">
@@ -94,20 +94,20 @@
 
       <div class="relative z-10 max-w-[1600px] mx-auto w-full px-6 md:px-10 pb-14 md:pb-20">
         <div class="max-w-xl">
-          <p data-reveal class="eyebrow mb-5">17 YEARS OF JOURNEYS SINCE 2009</p>
+          <p data-reveal class="eyebrow mb-5" data-i18n="hero.eyebrow">17 YEARS OF JOURNEYS SINCE 2009</p>
           <h1 class="font-display text-[2.6rem] leading-[1.05] sm:text-6xl md:text-7xl mb-6">
-            <span data-split-line class="block">Discover Uzbekistan</span>
-            <span data-split-line class="block italic text-gold">and the world</span>
-            <span data-split-line class="block">with Mira-Lux.</span>
+            <span data-split-line data-i18n="hero.h1.line1" class="block">Discover Uzbekistan</span>
+            <span data-split-line data-i18n="hero.h1.line2" class="block italic text-gold">and the world</span>
+            <span data-split-line data-i18n="hero.h1.line3" class="block">with Mira-Lux.</span>
           </h1>
-          <p data-reveal class="text-cream/70 text-[15px] md:text-base max-w-md mb-8 leading-relaxed">
+          <p data-reveal class="text-cream/70 text-[15px] md:text-base max-w-md mb-8 leading-relaxed" data-i18n="hero.subtitle">
             Since 2009, Mira-Lux has guided travelers through Samarkand, Bukhara, Khiva and Tashkent, plus tours abroad — visas, flights, hotels, guides and transfers, all handled for you.
           </p>
           <button data-reveal id="play-film" class="group flex items-center gap-4" data-magnetic>
             <span class="w-12 h-12 rounded-full border border-cream/40 flex items-center justify-center group-hover:border-gold group-hover:bg-gold/10 transition-colors">
               <svg width="12" height="14" viewBox="0 0 12 14" fill="currentColor"><path d="M0 0L12 7L0 14V0Z"/></svg>
             </span>
-            <span class="text-[13px] tracking-[0.15em] text-cream/80 group-hover:text-cream transition-colors">PLAY FILM</span>
+            <span class="text-[13px] tracking-[0.15em] text-cream/80 group-hover:text-cream transition-colors" data-i18n="hero.playFilm">PLAY FILM</span>
           </button>
         </div>
       </div>
@@ -116,34 +116,34 @@
       <div class="relative z-10 max-w-[1600px] mx-auto w-full px-6 md:px-10 -mb-8 md:-mb-9">
         <div data-reveal class="search-bar grid grid-cols-2 md:grid-cols-[1.3fr_1fr_1fr_1.1fr_auto] gap-px rounded-2xl overflow-hidden">
           <div class="search-field">
-            <span class="field-label">DESTINATION</span>
+            <span class="field-label" data-i18n="search.destination.label">DESTINATION</span>
             <div class="flex items-center justify-between gap-2">
-              <span class="text-cream/40 text-sm">Where to?</span>
+              <span class="text-cream/40 text-sm" data-i18n="search.destination.placeholder">Where to?</span>
               <svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor" class="text-gold shrink-0"><path d="M128,16a88.1,88.1,0,0,0-88,88c0,75.3,80,132.17,83.41,134.55a8,8,0,0,0,9.18,0C136,236.17,216,179.3,216,104A88.1,88.1,0,0,0,128,16Zm0,120a32,32,0,1,1,32-32A32,32,0,0,1,128,136Z"/></svg>
             </div>
           </div>
           <div class="search-field">
-            <span class="field-label">CHECK-IN</span>
+            <span class="field-label" data-i18n="search.checkin.label">CHECK-IN</span>
             <div class="flex items-center justify-between gap-2">
-              <span class="text-cream/40 text-sm">Select date</span>
+              <span class="text-cream/40 text-sm" data-i18n="search.checkin.placeholder">Select date</span>
               <svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor" class="text-gold shrink-0"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg>
             </div>
           </div>
           <div class="search-field">
-            <span class="field-label">CHECK-OUT</span>
+            <span class="field-label" data-i18n="search.checkout.label">CHECK-OUT</span>
             <div class="flex items-center justify-between gap-2">
-              <span class="text-cream/40 text-sm">Select date</span>
+              <span class="text-cream/40 text-sm" data-i18n="search.checkout.placeholder">Select date</span>
               <svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor" class="text-gold shrink-0"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg>
             </div>
           </div>
           <div class="search-field">
-            <span class="field-label">TRAVELERS</span>
+            <span class="field-label" data-i18n="search.travelers.label">TRAVELERS</span>
             <div class="flex items-center justify-between gap-2">
-              <span class="text-cream/85 text-sm">2 Adults · 0 Children</span>
+              <span class="text-cream/85 text-sm" data-i18n="search.travelers.value">2 Adults · 0 Children</span>
               <svg width="12" height="8" viewBox="0 0 12 8" fill="currentColor" class="text-cream/50 shrink-0"><path d="M1 1L6 6L11 1"/></svg>
             </div>
           </div>
-          <button class="btn-gold justify-center !rounded-none md:!rounded-r-2xl px-8" data-magnetic>EXPLORE JOURNEYS</button>
+          <button class="btn-gold justify-center !rounded-none md:!rounded-r-2xl px-8" data-magnetic data-i18n="search.button">EXPLORE JOURNEYS</button>
         </div>
       </div>
     </section>
@@ -151,18 +151,18 @@
     <!-- MARQUEE -->
     <div class="marquee-band">
       <div class="marquee-track">
-        <span>SAMARKAND</span><span class="marquee-dot">★</span>
-        <span>BUKHARA</span><span class="marquee-dot">★</span>
-        <span>KHIVA</span><span class="marquee-dot">★</span>
-        <span>TASHKENT</span><span class="marquee-dot">★</span>
-        <span>ANTALYA</span><span class="marquee-dot">★</span>
-        <span>TURKEY</span><span class="marquee-dot">★</span>
-        <span>SAMARKAND</span><span class="marquee-dot">★</span>
-        <span>BUKHARA</span><span class="marquee-dot">★</span>
-        <span>KHIVA</span><span class="marquee-dot">★</span>
-        <span>TASHKENT</span><span class="marquee-dot">★</span>
-        <span>ANTALYA</span><span class="marquee-dot">★</span>
-        <span>TURKEY</span><span class="marquee-dot">★</span>
+        <span data-i18n="marquee.samarkand">SAMARKAND</span><span class="marquee-dot">★</span>
+        <span data-i18n="marquee.bukhara">BUKHARA</span><span class="marquee-dot">★</span>
+        <span data-i18n="marquee.khiva">KHIVA</span><span class="marquee-dot">★</span>
+        <span data-i18n="marquee.tashkent">TASHKENT</span><span class="marquee-dot">★</span>
+        <span data-i18n="marquee.antalya">ANTALYA</span><span class="marquee-dot">★</span>
+        <span data-i18n="marquee.turkey">TURKEY</span><span class="marquee-dot">★</span>
+        <span data-i18n="marquee.samarkand">SAMARKAND</span><span class="marquee-dot">★</span>
+        <span data-i18n="marquee.bukhara">BUKHARA</span><span class="marquee-dot">★</span>
+        <span data-i18n="marquee.khiva">KHIVA</span><span class="marquee-dot">★</span>
+        <span data-i18n="marquee.tashkent">TASHKENT</span><span class="marquee-dot">★</span>
+        <span data-i18n="marquee.antalya">ANTALYA</span><span class="marquee-dot">★</span>
+        <span data-i18n="marquee.turkey">TURKEY</span><span class="marquee-dot">★</span>
       </div>
     </div>
 
@@ -171,12 +171,12 @@
       <div class="max-w-[1600px] mx-auto px-6 md:px-10">
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14">
           <div>
-            <p data-reveal class="eyebrow mb-4">POPULAR DESTINATIONS</p>
-            <h2 data-reveal class="font-display text-4xl md:text-5xl leading-tight max-w-lg">
+            <p data-reveal class="eyebrow mb-4" data-i18n="dest.eyebrow">POPULAR DESTINATIONS</p>
+            <h2 data-reveal class="font-display text-4xl md:text-5xl leading-tight max-w-lg" data-i18n-html="dest.heading">
               Where will your <em class="italic text-gold">next story</em> begin?
             </h2>
           </div>
-          <a data-reveal href="#" class="link-underline text-[13px] tracking-[0.1em] text-cream/70 hover:text-cream whitespace-nowrap">VIEW ALL DESTINATIONS <span aria-hidden="true">→</span></a>
+          <a data-reveal href="#" class="link-underline text-[13px] tracking-[0.1em] text-cream/70 hover:text-cream whitespace-nowrap"><span data-i18n="dest.viewAll">VIEW ALL DESTINATIONS</span> <span aria-hidden="true">→</span></a>
         </div>
       </div>
 
@@ -185,43 +185,43 @@
           <div data-reveal class="dest-card dest-card--tall snap-start">
             <img src="https://images.unsplash.com/photo-1727445231749-421ec9a87ffe?q=80&w=900&auto=format&fit=crop" alt="Samarkand" />
             <div class="dest-overlay">
-              <span class="font-display text-lg tracking-wide">SAMARKAND</span>
-              <span class="text-xs text-cream/70">Afrosiyob Express · 5D/4N · From $636</span>
+              <span class="font-display text-lg tracking-wide" data-i18n="card1.title">SAMARKAND</span>
+              <span class="text-xs text-cream/70" data-i18n="card1.sub">Afrosiyob Express · 5D/4N · From $636</span>
             </div>
           </div>
           <div data-reveal class="dest-card dest-card--short snap-start">
             <img src="https://images.unsplash.com/photo-1653023102302-247f5f0fbdd1?q=80&w=900&auto=format&fit=crop" alt="Classic Uzbekistan" />
             <div class="dest-overlay">
-              <span class="font-display text-lg tracking-wide">CLASSIC UZBEKISTAN</span>
-              <span class="text-xs text-cream/70">11D/10N · From $548</span>
+              <span class="font-display text-lg tracking-wide" data-i18n="card2.title">CLASSIC UZBEKISTAN</span>
+              <span class="text-xs text-cream/70" data-i18n="card2.sub">11D/10N · From $548</span>
             </div>
           </div>
           <div data-reveal class="dest-card dest-card--tall snap-start">
             <img src="https://images.unsplash.com/photo-1662492727591-b8441648d861?q=80&w=900&auto=format&fit=crop" alt="Bukhara and Samarkand" />
             <div class="dest-overlay">
-              <span class="font-display text-lg tracking-wide">BUKHARA · SAMARKAND</span>
-              <span class="text-xs text-cream/70">7D/6N · Price on request</span>
+              <span class="font-display text-lg tracking-wide" data-i18n="card3.title">BUKHARA · SAMARKAND</span>
+              <span class="text-xs text-cream/70" data-i18n="card3.sub">7D/6N · Price on request</span>
             </div>
           </div>
           <div data-reveal class="dest-card dest-card--short snap-start">
             <img src="https://images.unsplash.com/photo-1665130530883-71891ff446c4?q=80&w=900&auto=format&fit=crop" alt="Antalya, Turkey" />
             <div class="dest-overlay">
-              <span class="font-display text-lg tracking-wide">ANTALYA, TURKEY</span>
-              <span class="text-xs text-cream/70">8 Days · 10,600,000 UZS</span>
+              <span class="font-display text-lg tracking-wide" data-i18n="card4.title">ANTALYA, TURKEY</span>
+              <span class="text-xs text-cream/70" data-i18n="card4.sub">8 Days · 10,600,000 UZS</span>
             </div>
           </div>
           <div data-reveal class="dest-card dest-card--tall snap-start">
             <img src="https://images.unsplash.com/photo-1715966743489-0ac1138420a5?q=80&w=900&auto=format&fit=crop" alt="Tashkent city tour" />
             <div class="dest-overlay">
-              <span class="font-display text-lg tracking-wide">TASHKENT CITY TOUR</span>
-              <span class="text-xs text-cream/70">1 Day · 750,000 UZS</span>
+              <span class="font-display text-lg tracking-wide" data-i18n="card5.title">TASHKENT CITY TOUR</span>
+              <span class="text-xs text-cream/70" data-i18n="card5.sub">1 Day · 750,000 UZS</span>
             </div>
           </div>
           <div data-reveal class="dest-card dest-card--short snap-start">
             <img src="https://images.unsplash.com/photo-1664602078796-68ee76b3fc59?q=80&w=900&auto=format&fit=crop" alt="Tashkent, Bukhara, Samarkand" />
             <div class="dest-overlay">
-              <span class="font-display text-lg tracking-wide">TASHKENT · BUKHARA · SAMARKAND</span>
-              <span class="text-xs text-cream/70">4 Days · 4,500,000 UZS</span>
+              <span class="font-display text-lg tracking-wide" data-i18n="card6.title">TASHKENT · BUKHARA · SAMARKAND</span>
+              <span class="text-xs text-cream/70" data-i18n="card6.sub">4 Days · 4,500,000 UZS</span>
             </div>
           </div>
         </div>
@@ -232,18 +232,18 @@
     <section id="experiences" class="section-pad">
       <div class="max-w-[1600px] mx-auto px-6 md:px-10 grid lg:grid-cols-[1fr_1.15fr] gap-14 lg:gap-20 items-center">
         <div class="max-w-lg">
-          <p data-reveal class="eyebrow mb-4">17 YEARS OF EXPERTISE</p>
-          <h2 data-reveal class="font-display text-4xl md:text-5xl leading-tight mb-6">Tours across Uzbekistan, handled from A to Z.</h2>
-          <p data-reveal class="text-cream/65 leading-relaxed mb-8">
+          <p data-reveal class="eyebrow mb-4" data-i18n="exp.eyebrow">17 YEARS OF EXPERTISE</p>
+          <h2 data-reveal class="font-display text-4xl md:text-5xl leading-tight mb-6" data-i18n="exp.heading">Tours across Uzbekistan, handled from A to Z.</h2>
+          <p data-reveal class="text-cream/65 leading-relaxed mb-8" data-i18n="exp.text">
             From visas and flights to hotels, guides and transfers — our team plans every detail of your trip, whether it's a private tour or a group departure.
           </p>
           <ul class="space-y-4 mb-9">
-            <li data-reveal class="check-item">Visas &amp; Air Tickets</li>
-            <li data-reveal class="check-item">Hotels &amp; Guides</li>
-            <li data-reveal class="check-item">Private &amp; Group Tours</li>
-            <li data-reveal class="check-item">Airport Transfers</li>
+            <li data-reveal class="check-item" data-i18n="exp.check1">Visas &amp; Air Tickets</li>
+            <li data-reveal class="check-item" data-i18n="exp.check2">Hotels &amp; Guides</li>
+            <li data-reveal class="check-item" data-i18n="exp.check3">Private &amp; Group Tours</li>
+            <li data-reveal class="check-item" data-i18n="exp.check4">Airport Transfers</li>
           </ul>
-          <a data-reveal href="#collections" class="btn-outline" data-magnetic>EXPLORE COLLECTIONS</a>
+          <a data-reveal href="#collections" class="btn-outline" data-magnetic data-i18n="exp.button">EXPLORE COLLECTIONS</a>
         </div>
 
         <div class="relative lg:mt-16">
@@ -260,15 +260,15 @@
             <div class="flex justify-between gap-6">
               <div class="max-w-[240px]">
                 <svg width="20" height="16" viewBox="0 0 32 24" fill="currentColor" class="text-gold/70 mb-3"><path d="M0 24V14.4Q0 8 3.2 4T12 0l1.6 3.6Q10 4.8 8.4 7.4T6.8 12.8H12V24H0ZM18.4 24V14.4Q18.4 8 21.6 4T30.4 0L32 3.6Q28.4 4.8 26.8 7.4T25.2 12.8H30.4V24H18.4Z"/></svg>
-                <p class="text-ink/80 text-[15px] leading-snug italic">The Silk Road's three great cities — Samarkand, Bukhara and Khiva — in one seamless route.</p>
-                <a href="https://instagram.com/miraluxtravelagency" target="_blank" rel="noopener" class="text-ink/50 text-xs mt-3 tracking-wide block hover:text-ink/80 transition-colors">REAL REVIEWS ON INSTAGRAM <span class="text-ink/30">·</span> @MIRALUXTRAVELAGENCY</a>
+                <p class="text-ink/80 text-[15px] leading-snug italic" data-i18n="testimonial.quote">The Silk Road's three great cities — Samarkand, Bukhara and Khiva — in one seamless route.</p>
+                <a href="https://instagram.com/miraluxtravelagency" target="_blank" rel="noopener" class="text-ink/50 text-xs mt-3 tracking-wide block hover:text-ink/80 transition-colors" data-i18n="testimonial.reviewsLink">REAL REVIEWS ON INSTAGRAM <span class="text-ink/30">·</span> @MIRALUXTRAVELAGENCY</a>
               </div>
               <div class="hidden sm:flex flex-col justify-between items-end text-right shrink-0">
                 <div>
-                  <p class="eyebrow !text-ink/40 mb-1">CLASSIC UZBEKISTAN</p>
-                  <p class="text-ink/60 text-xs">11 Days / 10 Nights</p>
+                  <p class="eyebrow !text-ink/40 mb-1" data-i18n="card2.title">CLASSIC UZBEKISTAN</p>
+                  <p class="text-ink/60 text-xs" data-i18n="testimonial.duration">11 Days / 10 Nights</p>
                 </div>
-                <p class="font-display text-lg text-ink">From $548</p>
+                <p class="font-display text-lg text-ink" data-i18n="testimonial.price">From $548</p>
               </div>
               <a href="https://t.me/Miralux_travel" target="_blank" rel="noopener" class="hidden sm:flex w-10 h-10 rounded-full bg-gold/90 items-center justify-center shrink-0 self-end" data-magnetic>
                 <svg width="14" height="14" viewBox="0 0 256 256" fill="#0c0f14"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
@@ -276,8 +276,8 @@
             </div>
             <div class="sm:hidden mt-4 flex items-center justify-between border-t border-ink/10 pt-4">
               <div>
-                <p class="eyebrow !text-ink/40 mb-1">CLASSIC UZBEKISTAN · 11D/10N</p>
-                <p class="font-display text-lg text-ink">From $548</p>
+                <p class="eyebrow !text-ink/40 mb-1" data-i18n="testimonial.mobileTitle">CLASSIC UZBEKISTAN · 11D/10N</p>
+                <p class="font-display text-lg text-ink" data-i18n="testimonial.price">From $548</p>
               </div>
             </div>
           </div>
@@ -294,72 +294,72 @@
 
       <div class="relative z-10 max-w-[1600px] mx-auto px-6 md:px-10">
         <div class="text-center max-w-2xl mx-auto mb-20">
-          <p data-reveal class="eyebrow mb-4 justify-center">COLLECTIONS</p>
-          <h2 data-reveal class="font-display text-4xl md:text-5xl">Travel your way</h2>
+          <p data-reveal class="eyebrow mb-4 justify-center" data-i18n="col.eyebrow">COLLECTIONS</p>
+          <h2 data-reveal class="font-display text-4xl md:text-5xl" data-i18n="col.heading">Travel your way</h2>
         </div>
 
         <div class="way-row mb-28">
           <div class="way-item way-item--up">
             <svg width="30" height="30" viewBox="0 0 256 256" fill="currentColor"><path d="M247.36,204.15,168.94,49a24,24,0,0,0-41.88,0L48.64,204.15a8,8,0,0,0,7.14,11.62H240.22A8,8,0,0,0,247.36,204.15ZM97.7,199.77l30.3-59.05,30.3,59.05Z"/></svg>
-            <span>ADVENTURE</span>
-            <p>For thrill seekers</p>
+            <span data-i18n="way1.title">ADVENTURE</span>
+            <p data-i18n="way1.sub">For thrill seekers</p>
           </div>
           <div class="way-item way-item--down">
             <svg width="30" height="30" viewBox="0 0 256 256" fill="currentColor"><path d="M240,102c0,70-103.79,126.66-108.21,129a8,8,0,0,1-7.58,0C119.79,228.66,16,172,16,102A62.07,62.07,0,0,1,78,40c20.65,0,38.73,8.88,50,23.89C139.27,48.88,157.35,40,178,40A62.07,62.07,0,0,1,240,102Z"/></svg>
-            <span>ROMANCE</span>
-            <p>For couples</p>
+            <span data-i18n="way2.title">ROMANCE</span>
+            <p data-i18n="way2.sub">For couples</p>
           </div>
           <div class="way-item way-item--up">
             <svg width="30" height="30" viewBox="0 0 256 256" fill="currentColor"><path d="M128,28a80.09,80.09,0,0,0-80,80c0,45.75,33.71,88.87,54.5,111.13A24,24,0,0,0,120,224h16a24,24,0,0,0,17.5-4.87C174.29,196.87,208,153.75,208,108A80.09,80.09,0,0,0,128,28Zm0,56a24,24,0,1,1-24,24A24,24,0,0,1,128,84Z"/></svg>
-            <span>WELLNESS</span>
-            <p>For the soul</p>
+            <span data-i18n="way3.title">WELLNESS</span>
+            <p data-i18n="way3.sub">For the soul</p>
           </div>
           <div class="way-item way-item--down">
             <svg width="30" height="30" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24a104,104,0,1,0,104,104A104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Z"/></svg>
-            <span>CULTURE</span>
-            <p>For the curious</p>
+            <span data-i18n="way4.title">CULTURE</span>
+            <p data-i18n="way4.sub">For the curious</p>
           </div>
           <div class="way-item way-item--up">
             <svg width="30" height="30" viewBox="0 0 256 256" fill="currentColor"><path d="M164,144a36,36,0,1,1-36-36A36,36,0,0,1,164,144Zm76-16A103.42,103.42,0,0,1,224,178.53V208a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V178.53A103.42,103.42,0,0,1,16,128,112,112,0,0,1,240,128Z"/></svg>
-            <span>FAMILY</span>
-            <p>For everyone</p>
+            <span data-i18n="way5.title">FAMILY</span>
+            <p data-i18n="way5.sub">For everyone</p>
           </div>
           <div class="way-item way-item--down">
             <svg width="30" height="30" viewBox="0 0 256 256" fill="currentColor"><path d="M232,64H208V56a24,24,0,0,0-24-24H72A24,24,0,0,0,48,56v8H24A16,16,0,0,0,8,80v24a40,40,0,0,0,40,40h3.29A80.42,80.42,0,0,0,120,196.15V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V196.15A80.42,80.42,0,0,0,204.71,144H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64Z"/></svg>
-            <span>LUXURY</span>
-            <p>For those who deserve more</p>
+            <span data-i18n="way6.title">LUXURY</span>
+            <p data-i18n="way6.sub">For those who deserve more</p>
           </div>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-14 items-start mb-24">
           <div>
-            <p data-reveal class="eyebrow mb-4">TRAVEL WITH CONFIDENCE</p>
-            <h3 data-reveal class="font-display text-3xl md:text-4xl leading-tight mb-5 max-w-md">Your journey, protected and perfected.</h3>
-            <p data-reveal class="text-cream/60 leading-relaxed max-w-md mb-6">
+            <p data-reveal class="eyebrow mb-4" data-i18n="trust.eyebrow">TRAVEL WITH CONFIDENCE</p>
+            <h3 data-reveal class="font-display text-3xl md:text-4xl leading-tight mb-5 max-w-md" data-i18n="trust.heading">Your journey, protected and perfected.</h3>
+            <p data-reveal class="text-cream/60 leading-relaxed max-w-md mb-6" data-i18n="trust.text">
               We're here for you at every step, before, during, and after your trip.
             </p>
-            <a data-reveal href="#" class="link-underline text-[13px] tracking-[0.1em] text-cream/70 hover:text-cream">LEARN MORE <span aria-hidden="true">→</span></a>
+            <a data-reveal href="#" class="link-underline text-[13px] tracking-[0.1em] text-cream/70 hover:text-cream"><span data-i18n="trust.learnMore">LEARN MORE</span> <span aria-hidden="true">→</span></a>
           </div>
           <div class="grid sm:grid-cols-2 gap-4">
             <div data-reveal class="trust-card spotlight-card">
               <svg width="22" height="22" viewBox="0 0 256 256" fill="currentColor" class="text-gold mb-4"><path d="M225.86,102.82c-3.77-3.94-7.67-8-9.14-11.57-1.36-3.27-1.44-8.69-1.52-13.94-.15-9.76-.31-20.82-8-28.51s-18.75-7.85-28.51-8c-5.25-.08-10.67-.16-13.94-1.52-3.57-1.47-7.63-5.37-11.57-9.14C146.28,23.51,138.44,16,128,16s-18.27,7.51-25.18,14.14c-3.94,3.77-8,7.67-11.57,9.14C88,40.64,82.56,40.72,77.31,40.8c-9.76.15-20.82.31-28.51,8S41,67.55,40.8,77.31c-.08,5.25-.16,10.67-1.52,13.94-1.47,3.57-5.37,7.63-9.14,11.57C23.51,109.72,16,117.56,16,128s7.51,18.27,14.14,25.18c3.77,3.94,7.67,8,9.14,11.57,1.36,3.27,1.44,8.69,1.52,13.94.15,9.76.31,20.82,8,28.51s18.75,7.85,28.51,8c5.25.08,10.67.16,13.94,1.52,3.57,1.47,7.63,5.37,11.57,9.14C109.72,232.49,117.56,240,128,240s18.27-7.51,25.18-14.14c3.94-3.77,8-7.67,11.57-9.14,3.27-1.36,8.69-1.44,13.94-1.52,9.76-.15,20.82-.31,28.51-8s7.85-18.75,8-28.51c.08-5.25.16-10.67,1.52-13.94,1.47-3.57,5.37-7.63,9.14-11.57C232.49,146.28,240,138.44,240,128S232.49,109.73,225.86,102.82Zm-52.2,6.84-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg>
-              <span class="font-display text-lg block mb-1">Best Price Guarantee</span>
-              <p class="text-cream/55 text-sm leading-relaxed">We match any price so you always get the best value.</p>
+              <span class="font-display text-lg block mb-1" data-i18n="trust1.title">Best Price Guarantee</span>
+              <p class="text-cream/55 text-sm leading-relaxed" data-i18n="trust1.text">We match any price so you always get the best value.</p>
             </div>
             <div data-reveal class="trust-card spotlight-card">
               <svg width="22" height="22" viewBox="0 0 256 256" fill="currentColor" class="text-gold mb-4"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg>
-              <span class="font-display text-lg block mb-1">Flexible Booking</span>
-              <p class="text-cream/55 text-sm leading-relaxed">Plans change. We offer flexible options for you.</p>
+              <span class="font-display text-lg block mb-1" data-i18n="trust2.title">Flexible Booking</span>
+              <p class="text-cream/55 text-sm leading-relaxed" data-i18n="trust2.text">Plans change. We offer flexible options for you.</p>
             </div>
             <div data-reveal class="trust-card spotlight-card">
               <svg width="22" height="22" viewBox="0 0 256 256" fill="currentColor" class="text-gold mb-4"><path d="M230.93,220a8,8,0,0,1-6.93,4H32a8,8,0,0,1-6.92-12c15.23-26.33,38.7-45.21,66.09-54.16a72,72,0,1,1,73.66,0C192.23,166.78,215.7,185.66,230.93,208A8,8,0,0,1,230.93,220Z"/></svg>
-              <span class="font-display text-lg block mb-1">Expert Support</span>
-              <p class="text-cream/55 text-sm leading-relaxed">Our travel experts are available 24/7 for you.</p>
+              <span class="font-display text-lg block mb-1" data-i18n="trust3.title">Expert Support</span>
+              <p class="text-cream/55 text-sm leading-relaxed" data-i18n="trust3.text">Our travel experts are available 24/7 for you.</p>
             </div>
             <div data-reveal class="trust-card spotlight-card">
               <svg width="22" height="22" viewBox="0 0 256 256" fill="currentColor" class="text-gold mb-4"><path d="M208,40H48A16,16,0,0,0,32,56v58.78c0,89.61,75.82,120.35,91,125.74a15.53,15.53,0,0,0,10,0c15.23-5.39,91-36.13,91-125.74V56A16,16,0,0,0,208,40Z"/></svg>
-              <span class="font-display text-lg block mb-1">17 Years in Business</span>
-              <p class="text-cream/55 text-sm leading-relaxed">Serving travelers from Tashkent since 2009.</p>
+              <span class="font-display text-lg block mb-1" data-i18n="trust4.title">17 Years in Business</span>
+              <p class="text-cream/55 text-sm leading-relaxed" data-i18n="trust4.text">Serving travelers from Tashkent since 2009.</p>
             </div>
           </div>
         </div>
@@ -371,35 +371,35 @@
       <div class="max-w-[1600px] mx-auto px-6 md:px-10">
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
           <div>
-            <p data-reveal class="eyebrow mb-4">TRAVEL INSPIRATION</p>
-            <h2 data-reveal class="font-display text-4xl md:text-5xl max-w-lg">Stories to inspire your adventures.</h2>
+            <p data-reveal class="eyebrow mb-4" data-i18n="blog.eyebrow">TRAVEL INSPIRATION</p>
+            <h2 data-reveal class="font-display text-4xl md:text-5xl max-w-lg" data-i18n="blog.heading">Stories to inspire your adventures.</h2>
           </div>
-          <a data-reveal href="#" class="link-underline text-[13px] tracking-[0.1em] text-cream/70 hover:text-cream whitespace-nowrap">VISIT OUR BLOG <span aria-hidden="true">→</span></a>
+          <a data-reveal href="#" class="link-underline text-[13px] tracking-[0.1em] text-cream/70 hover:text-cream whitespace-nowrap"><span data-i18n="blog.visitBlog">VISIT OUR BLOG</span> <span aria-hidden="true">→</span></a>
         </div>
 
         <div class="blog-bento">
           <a data-reveal href="#" class="blog-card blog-card--feature">
             <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1400&auto=format&fit=crop" alt="Hot air balloons" />
             <div class="blog-card-body">
-              <div class="blog-tag">SILK ROAD GUIDE</div>
-              <h3>Samarkand, Bukhara and Khiva: how to plan the classic route.</h3>
-              <p class="blog-meta">May 15, 2026 <span>·</span> 8 min read</p>
+              <div class="blog-tag" data-i18n="blog1.tag">SILK ROAD GUIDE</div>
+              <h3 data-i18n="blog1.title">Samarkand, Bukhara and Khiva: how to plan the classic route.</h3>
+              <p class="blog-meta" data-i18n-html="blog1.meta">May 15, 2026 <span>·</span> 8 min read</p>
             </div>
           </a>
           <a data-reveal href="#" class="blog-card">
             <img src="https://images.unsplash.com/photo-1573052905904-34ad8c27f0cc?q=80&w=1200&auto=format&fit=crop" alt="Beach aerial" />
             <div class="blog-card-body">
-              <div class="blog-tag">TRAVEL TIPS</div>
-              <h3>Visas, tickets and transfers: what to arrange before you fly.</h3>
-              <p class="blog-meta">May 10, 2026 <span>·</span> 6 min read</p>
+              <div class="blog-tag" data-i18n="blog2.tag">TRAVEL TIPS</div>
+              <h3 data-i18n="blog2.title">Visas, tickets and transfers: what to arrange before you fly.</h3>
+              <p class="blog-meta" data-i18n-html="blog2.meta">May 10, 2026 <span>·</span> 6 min read</p>
             </div>
           </a>
           <a data-reveal href="#" class="blog-card">
             <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?q=80&w=1200&auto=format&fit=crop" alt="Overwater bungalows" />
             <div class="blog-card-body">
-              <div class="blog-tag">BEYOND UZBEKISTAN</div>
-              <h3>Why Antalya is our travelers' favorite escape abroad.</h3>
-              <p class="blog-meta">May 5, 2026 <span>·</span> 7 min read</p>
+              <div class="blog-tag" data-i18n="blog3.tag">BEYOND UZBEKISTAN</div>
+              <h3 data-i18n="blog3.title">Why Antalya is our travelers' favorite escape abroad.</h3>
+              <p class="blog-meta" data-i18n-html="blog3.meta">May 5, 2026 <span>·</span> 7 min read</p>
             </div>
           </a>
         </div>
@@ -414,12 +414,12 @@
       </div>
       <div class="relative z-10 max-w-[1600px] mx-auto px-6 md:px-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
         <div class="max-w-md">
-          <p data-reveal class="eyebrow mb-4">BE THE FIRST TO KNOW</p>
-          <h2 data-reveal class="font-display text-3xl md:text-4xl leading-tight">Get exclusive travel inspiration and special offers.</h2>
+          <p data-reveal class="eyebrow mb-4" data-i18n="plan.eyebrow">BE THE FIRST TO KNOW</p>
+          <h2 data-reveal class="font-display text-3xl md:text-4xl leading-tight" data-i18n="plan.heading">Get exclusive travel inspiration and special offers.</h2>
         </div>
         <form data-reveal class="flex w-full max-w-md gap-3" onsubmit="return false">
-          <input type="email" required placeholder="Your email address" class="newsletter-input" />
-          <button class="btn-gold shrink-0" data-magnetic>SUBSCRIBE</button>
+          <input type="email" required placeholder="Your email address" class="newsletter-input" data-i18n-placeholder="plan.placeholder" />
+          <button class="btn-gold shrink-0" data-magnetic data-i18n="plan.subscribe">SUBSCRIBE</button>
         </form>
       </div>
     </section>
@@ -431,8 +431,8 @@
       <div class="grid md:grid-cols-[1.4fr_1fr_1fr_1fr_1fr_1.2fr] gap-10 pb-16 border-b border-cream/10">
         <div>
           <span class="font-display text-xl tracking-[0.15em] block mb-1">MIRA-LUX</span>
-          <span class="text-[9px] tracking-[0.35em] text-cream/40 block mb-5">TRAVEL BEYOND</span>
-          <p class="text-cream/50 text-sm leading-relaxed max-w-[220px] mb-6">A Tashkent tour operator and air-ticket office, crafting trips across Uzbekistan and abroad since 2009.</p>
+          <span data-i18n="brand.tagline" class="text-[9px] tracking-[0.35em] text-cream/40 block mb-5">TRAVEL BEYOND</span>
+          <p class="text-cream/50 text-sm leading-relaxed max-w-[220px] mb-6" data-i18n="footer.desc">A Tashkent tour operator and air-ticket office, crafting trips across Uzbekistan and abroad since 2009.</p>
           <div class="flex gap-3">
             <a href="https://instagram.com/miraluxtravelagency" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram" data-magnetic><svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40Z"/></svg></a>
             <a href="https://facebook.com/miraluxtravel" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook" data-magnetic><svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M128,20A108,108,0,1,0,236,128,108.12,108.12,0,0,0,128,20Zm12,191.13V156h20a12,12,0,0,0,0-24H140V112a12,12,0,0,1,12-12h16a12,12,0,0,0,0-24H152a36,36,0,0,0-36,36v20H96a12,12,0,0,0,0,24h20v55.13a84,84,0,1,1,24,0Z"/></svg></a>
@@ -441,23 +441,23 @@
         </div>
 
         <div class="footer-col">
-          <span class="footer-heading">DESTINATIONS</span>
-          <a href="#destinations">Samarkand</a><a href="#destinations">Bukhara</a><a href="#destinations">Khiva</a><a href="#destinations">Tashkent</a><a href="#destinations">Antalya, Turkey</a>
+          <span class="footer-heading" data-i18n="nav.destinations">DESTINATIONS</span>
+          <a href="#destinations" data-i18n="marquee.samarkand">Samarkand</a><a href="#destinations" data-i18n="marquee.bukhara">Bukhara</a><a href="#destinations" data-i18n="marquee.khiva">Khiva</a><a href="#destinations" data-i18n="marquee.tashkent">Tashkent</a><a href="#destinations" data-i18n="footer.antalyaTurkey">Antalya, Turkey</a>
         </div>
         <div class="footer-col">
-          <span class="footer-heading">EXPERIENCES</span>
-          <a href="#">Adventure</a><a href="#">Romance</a><a href="#">Wellness</a><a href="#">Culture</a><a href="#">Luxury</a><a href="#">Family</a>
+          <span class="footer-heading" data-i18n="nav.experiences">EXPERIENCES</span>
+          <a href="#" data-i18n="way1.title">Adventure</a><a href="#" data-i18n="way2.title">Romance</a><a href="#" data-i18n="way3.title">Wellness</a><a href="#" data-i18n="way4.title">Culture</a><a href="#" data-i18n="way6.title">Luxury</a><a href="#" data-i18n="way5.title">Family</a>
         </div>
         <div class="footer-col">
-          <span class="footer-heading">COMPANY</span>
-          <a href="#about">About Us</a><a href="https://instagram.com/miraluxtravelagency" target="_blank" rel="noopener">Reviews on Instagram</a><a href="#contact">Contact</a>
+          <span class="footer-heading" data-i18n="footer.company">COMPANY</span>
+          <a href="#about" data-i18n="mobile.about">About Us</a><a href="https://instagram.com/miraluxtravelagency" target="_blank" rel="noopener" data-i18n="footer.reviewsInstagram">Reviews on Instagram</a><a href="#contact" data-i18n="mobile.contact">Contact</a>
         </div>
         <div class="footer-col">
-          <span class="footer-heading">SUPPORT</span>
-          <a href="#">FAQ</a><a href="#">Travel Insurance</a><a href="#">Terms &amp; Conditions</a><a href="#">Privacy Policy</a><a href="#">Cookie Policy</a>
+          <span class="footer-heading" data-i18n="footer.support">SUPPORT</span>
+          <a href="#" data-i18n="footer.faq">FAQ</a><a href="#" data-i18n="footer.insurance">Travel Insurance</a><a href="#" data-i18n="footer.terms">Terms &amp; Conditions</a><a href="#" data-i18n="footer.privacy">Privacy Policy</a><a href="#" data-i18n="footer.cookies">Cookie Policy</a>
         </div>
         <div id="contact">
-          <span class="footer-heading">CONTACT US</span>
+          <span class="footer-heading" data-i18n="footer.contactHeading">CONTACT US</span>
           <a href="tel:+998712259090" class="contact-link">
             <svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor"><path d="M222.37,158.46l-47.11-21.11-.14-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.14L97.54,33.63a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.89-48.92A16,16,0,0,0,222.37,158.46Z"/></svg>
             +998 71 225 90 90
@@ -466,13 +466,13 @@
             <svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12.63,11.5a8,8,0,0,0,10.82,0l12.63-11.5,58.36,53.15H52.19ZM157.29,128,216,74.18V181.82Z"/></svg>
             miralux-travel@yandex.com
           </a>
-          <a href="https://t.me/Miralux_travel" target="_blank" rel="noopener" class="btn-outline mt-5 inline-flex" data-magnetic>PLAN YOUR JOURNEY</a>
+          <a href="https://t.me/Miralux_travel" target="_blank" rel="noopener" class="btn-outline mt-5 inline-flex" data-magnetic data-i18n="nav.plan">PLAN YOUR JOURNEY</a>
         </div>
       </div>
 
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-cream/35 text-xs tracking-wide">
-        <p>© 2026 MIRA-LUX Travel. All rights reserved.</p>
-        <p>Designed with <span class="text-gold">♥</span> for travelers</p>
+        <p data-i18n="footer.copyright">© 2026 MIRA-LUX Travel. All rights reserved.</p>
+        <p data-i18n-html="footer.designedWith">Designed with <span class="text-gold">♥</span> for travelers</p>
       </div>
     </div>
   </footer>
