@@ -6,6 +6,25 @@ import { LANGS, DEFAULT_LANG, applyLanguage, translate } from './i18n.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
+/* ---------------- Marquee fill ----------------
+   The track holds one translated set of cities. Word length varies a lot
+   between languages, so instead of hardcoding a repeat count we keep
+   doubling the content until each half comfortably covers the viewport —
+   that's what the xPercent:-50 loop below needs to stay seamless with no
+   gap on the right, regardless of language or screen width. */
+const marqueeCanonicalHTML = document.querySelector('.marquee-track')?.innerHTML ?? '';
+function fillMarquee() {
+  const track = document.querySelector('.marquee-track');
+  if (!track || !marqueeCanonicalHTML) return;
+  track.innerHTML = marqueeCanonicalHTML;
+  applyLanguage(currentLang);
+  let guard = 0;
+  while (track.scrollWidth / 2 < window.innerWidth + 200 && guard < 20) {
+    track.insertAdjacentHTML('beforeend', track.innerHTML);
+    guard++;
+  }
+}
+
 /* ---------------- Language ---------------- */
 let currentLang = localStorage.getItem('mira-lux-lang');
 if (!LANGS.includes(currentLang)) currentLang = DEFAULT_LANG;
@@ -14,6 +33,7 @@ function setLang(lang) {
   currentLang = lang;
   localStorage.setItem('mira-lux-lang', lang);
   applyLanguage(lang);
+  fillMarquee();
   const langCode = document.getElementById('lang-code');
   if (langCode) langCode.textContent = lang.toUpperCase();
 }
@@ -207,7 +227,7 @@ if (!reduceMotion && isFinePointer && tiltScene) {
   });
 }
 
-/* ---------------- Marquee ---------------- */
+/* ---------------- Marquee animation (content is filled in above) ---------------- */
 const marqueeTrack = document.querySelector('.marquee-track');
 if (marqueeTrack) {
   if (!reduceMotion) {
