@@ -170,33 +170,6 @@ function setMenu(open) {
 menuBtn?.addEventListener('click', () => setMenu(!menuOpen));
 mobileMenu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
 
-/* ---------------- Cursor ring ---------------- */
-if (!reduceMotion && isFinePointer) {
-  const ring = document.getElementById('cursor-ring');
-  const dot = document.getElementById('cursor-dot');
-  const ringX = gsap.quickTo(ring, 'x', { duration: 0.5, ease: 'power3.out' });
-  const ringY = gsap.quickTo(ring, 'y', { duration: 0.5, ease: 'power3.out' });
-  const dotX = gsap.quickTo(dot, 'x', { duration: 0.12, ease: 'power2.out' });
-  const dotY = gsap.quickTo(dot, 'y', { duration: 0.12, ease: 'power2.out' });
-  window.addEventListener('mousemove', (e) => {
-    ringX(e.clientX); ringY(e.clientY);
-    dotX(e.clientX); dotY(e.clientY);
-  });
-  document.querySelectorAll('a, button, [data-magnetic]').forEach((el) => {
-    el.addEventListener('mouseenter', () => {
-      ring.classList.add('is-active');
-      gsap.to(ring, { scale: 1.8, duration: 0.25, ease: 'power3.out' });
-    });
-    el.addEventListener('mouseleave', () => {
-      ring.classList.remove('is-active');
-      gsap.to(ring, { scale: 1, duration: 0.25, ease: 'power3.out' });
-    });
-  });
-} else {
-  document.getElementById('cursor-ring')?.remove();
-  document.getElementById('cursor-dot')?.remove();
-}
-
 /* ---------------- Magnetic buttons ---------------- */
 if (!reduceMotion && isFinePointer) {
   document.querySelectorAll('[data-magnetic]').forEach((el) => {

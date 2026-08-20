@@ -41,32 +41,6 @@ body {
   mix-blend-mode: overlay;
 }
 
-/* ---------- Cursor ---------- */
-.cursor-ring, .cursor-dot {
-  position: fixed;
-  top: 0; left: 0;
-  border-radius: 9999px;
-  pointer-events: none;
-  z-index: 90;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: difference;
-}
-.cursor-ring {
-  width: 34px; height: 34px;
-  border: 1px solid var(--color-cream);
-  transition: border-color 0.3s ease, opacity 0.3s ease;
-}
-.cursor-dot {
-  width: 5px; height: 5px;
-  background: var(--color-cream);
-}
-.cursor-ring.is-active {
-  border-color: var(--color-gold);
-}
-@media (pointer: coarse) {
-  .cursor-ring, .cursor-dot { display: none; }
-}
-
 /* ---------- Nav ---------- */
 #site-nav {
   background: linear-gradient(to bottom, rgba(11,14,19,0.65), transparent);
