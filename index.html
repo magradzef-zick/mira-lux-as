@@ -71,10 +71,10 @@
   <main id="top">
 
     <!-- HERO -->
-    <section id="hero" class="relative min-h-[100dvh] flex flex-col justify-end overflow-hidden">
+    <section id="hero" class="relative min-h-[100dvh] flex flex-col justify-end">
       <span class="hero-vertical-label" aria-hidden="true">MIRA-LUX · EST. 2009</span>
 
-      <div class="absolute inset-0" data-tilt-scene>
+      <div class="absolute inset-0 overflow-hidden" data-tilt-scene>
         <img data-speed="0.8" data-tilt-layer="0.6" src="https://images.unsplash.com/photo-1540202404-a2f29016b523?q=80&w=2400&auto=format&fit=crop" alt="Tropical lagoon resort" class="hero-img w-full h-[125%] object-cover" />
         <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-ink/50"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-ink/55 via-transparent to-transparent"></div>
@@ -101,7 +101,7 @@
             <span data-split-line data-i18n="hero.h1.line3" class="block">with Mira-Lux.</span>
           </h1>
           <p data-reveal class="text-cream/70 text-[15px] md:text-base max-w-md mb-8 leading-relaxed" data-i18n="hero.subtitle">
-            Since 2009, Mira-Lux has guided travelers through Samarkand, Bukhara, Khiva and Tashkent, plus tours abroad — visas, flights, hotels, guides and transfers, all handled for you.
+            Since 2009, we've planned tours across Uzbekistan and abroad — visas, hotels, guides and transfers.
           </p>
           <button data-reveal id="play-film" class="group flex items-center gap-4" data-magnetic>
             <span class="w-12 h-12 rounded-full border border-cream/40 flex items-center justify-center group-hover:border-gold group-hover:bg-gold/10 transition-colors">
@@ -113,7 +113,7 @@
       </div>
 
       <!-- Search bar -->
-      <div class="relative z-10 max-w-[1600px] mx-auto w-full px-6 md:px-10 -mb-8 md:-mb-9">
+      <div class="relative z-10 max-w-[1600px] mx-auto w-full px-6 md:px-10 mb-6 md:mb-8">
         <form id="search-form" data-reveal class="search-bar grid grid-cols-2 md:grid-cols-[1.3fr_1fr_1fr_1.1fr_auto] gap-px rounded-2xl overflow-hidden">
           <label class="search-field">
             <span class="field-label" data-i18n="search.destination.label">DESTINATION</span>

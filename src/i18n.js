@@ -23,7 +23,7 @@ const t = {
     'hero.h1.line1': 'Discover',
     'hero.h1.line2': 'Uzbekistan',
     'hero.h1.line3': 'with Mira-Lux.',
-    'hero.subtitle': "Since 2009, Mira-Lux has guided travelers through Samarkand, Bukhara, Khiva and Tashkent, plus tours abroad — visas, flights, hotels, guides and transfers, all handled for you.",
+    'hero.subtitle': "Since 2009, we've planned tours across Uzbekistan and abroad — visas, hotels, guides and transfers.",
     'hero.playFilm': 'PLAY FILM',
 
     'search.destination.label': 'DESTINATION',
@@ -164,7 +164,7 @@ const t = {
     'hero.h1.line1': 'Откройте',
     'hero.h1.line2': 'Узбекистан',
     'hero.h1.line3': 'с Mira-Lux.',
-    'hero.subtitle': 'С 2009 года Mira-Lux сопровождает путешественников по Самарканду, Бухаре, Хиве и Ташкенту, а также в поездках за рубеж — визы, авиабилеты, отели, гиды и трансферы берём на себя.',
+    'hero.subtitle': 'С 2009 года организуем туры по Узбекистану и за рубеж — визы, отели, гиды, трансферы.',
     'hero.playFilm': 'СМОТРЕТЬ ВИДЕО',
 
     'search.destination.label': 'НАПРАВЛЕНИЕ',
@@ -305,7 +305,7 @@ const t = {
     'hero.h1.line1': "O'zbekistonni",
     'hero.h1.line2': 'kashf eting',
     'hero.h1.line3': 'Mira-Lux bilan.',
-    'hero.subtitle': "2009-yildan beri Mira-Lux sayohatchilarni Samarqand, Buxoro, Xiva va Toshkent bo'ylab, shuningdek chet elga sayohatlarda kuzatib boradi — vizalar, chiptalar, mehmonxonalar, gidlar va transferlarni o'z zimmamizga olamiz.",
+    'hero.subtitle': "2009-yildan beri O'zbekiston va chet elga turlar — vizalar, mehmonxonalar, gidlar va transferlar.",
     'hero.playFilm': "VIDEONI KO'RISH",
 
     'search.destination.label': "YO'NALISH",
