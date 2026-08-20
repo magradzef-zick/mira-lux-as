@@ -80,21 +80,8 @@ if (!reduceMotion) {
   gsap.ticker.lagSmoothing(0);
 }
 
-/* ---------------- Loader ---------------- */
-window.addEventListener('load', () => {
-  const loader = document.getElementById('loader');
-  const word = document.querySelector('.loader-word');
-  const tl = gsap.timeline({
-    onComplete: () => {
-      loader.classList.add('is-hidden');
-      ScrollTrigger.refresh();
-    },
-  });
-  tl.to(word, { opacity: 1, duration: 0.5, ease: 'power2.out' })
-    .to(word, { opacity: 1, duration: 0.3 })
-    .to(loader, { opacity: 0, duration: 0.6, ease: 'power2.inOut' }, '+=0.15')
-    .call(() => heroIntro());
-});
+/* ---------------- Refresh scroll-trigger measurements once all assets are in ---------------- */
+window.addEventListener('load', () => ScrollTrigger.refresh());
 
 /* ---------------- Split text into chars ---------------- */
 function splitChars(el) {
@@ -143,6 +130,7 @@ function heroIntro() {
     }, 1)
     .from('.hero-badge', { scale: 0, opacity: 0, duration: 0.8, ease: 'back.out(2)' }, 1.2);
 }
+heroIntro();
 
 /* ---------------- Nav scroll state ---------------- */
 const nav = document.getElementById('site-nav');
