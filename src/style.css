@@ -322,6 +322,26 @@ body {
   color: rgba(244,239,230,0.4);
   font-weight: 600;
 }
+.search-control {
+  background: transparent;
+  border: none;
+  color: var(--color-cream);
+  font-size: 14px;
+  font-family: inherit;
+  width: 100%;
+  color-scheme: dark;
+  cursor: pointer;
+}
+.search-control:focus {
+  outline: none;
+}
+select.search-control {
+  appearance: none;
+}
+.search-control option {
+  background: var(--color-ink);
+  color: var(--color-cream);
+}
 
 /* ---------- Destination cards (horizontal pan + chaotic tilt) ---------- */
 .dest-hpan-wrap {

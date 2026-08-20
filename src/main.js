@@ -2,7 +2,7 @@ import './style.css';
 import Lenis from 'lenis';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { LANGS, DEFAULT_LANG, applyLanguage } from './i18n.js';
+import { LANGS, DEFAULT_LANG, applyLanguage, translate } from './i18n.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,6 +22,25 @@ setLang(currentLang);
 const langBtn = document.getElementById('lang-btn');
 langBtn?.addEventListener('click', () => {
   setLang(LANGS[(LANGS.indexOf(currentLang) + 1) % LANGS.length]);
+});
+
+/* ---------------- Search bar -> Telegram ---------------- */
+const searchForm = document.getElementById('search-form');
+searchForm?.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const destination = document.getElementById('search-destination').value;
+  const checkin = document.getElementById('search-checkin').value;
+  const checkout = document.getElementById('search-checkout').value;
+  const travelers = document.getElementById('search-travelers').value || '2';
+
+  const lines = [translate(currentLang, 'search.msg.greeting')];
+  if (destination) lines.push(`${translate(currentLang, 'search.msg.destination')}: ${destination}`);
+  if (checkin) lines.push(`${translate(currentLang, 'search.msg.checkin')}: ${checkin}`);
+  if (checkout) lines.push(`${translate(currentLang, 'search.msg.checkout')}: ${checkout}`);
+  lines.push(`${translate(currentLang, 'search.msg.travelers')}: ${travelers}`);
+
+  const url = `https://t.me/Miralux_travel?text=${encodeURIComponent(lines.join('\n'))}`;
+  window.open(url, '_blank', 'noopener');
 });
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

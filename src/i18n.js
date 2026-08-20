@@ -29,12 +29,19 @@ const t = {
     'search.destination.label': 'DESTINATION',
     'search.destination.placeholder': 'Where to?',
     'search.checkin.label': 'CHECK-IN',
-    'search.checkin.placeholder': 'Select date',
     'search.checkout.label': 'CHECK-OUT',
-    'search.checkout.placeholder': 'Select date',
     'search.travelers.label': 'TRAVELERS',
-    'search.travelers.value': '2 Adults · 0 Children',
     'search.button': 'EXPLORE JOURNEYS',
+    'search.opt.samarkand': 'Samarkand',
+    'search.opt.bukhara': 'Bukhara',
+    'search.opt.khiva': 'Khiva',
+    'search.opt.tashkent': 'Tashkent',
+    'search.opt.antalya': 'Antalya, Turkey',
+    'search.msg.greeting': "Hello! I'd like to plan a trip.",
+    'search.msg.destination': 'Destination',
+    'search.msg.checkin': 'Check-in',
+    'search.msg.checkout': 'Check-out',
+    'search.msg.travelers': 'Travelers',
 
     'marquee.samarkand': 'SAMARKAND',
     'marquee.bukhara': 'BUKHARA',
@@ -163,12 +170,19 @@ const t = {
     'search.destination.label': 'НАПРАВЛЕНИЕ',
     'search.destination.placeholder': 'Куда едем?',
     'search.checkin.label': 'ЗАЕЗД',
-    'search.checkin.placeholder': 'Выберите дату',
     'search.checkout.label': 'ВЫЕЗД',
-    'search.checkout.placeholder': 'Выберите дату',
     'search.travelers.label': 'ПУТЕШЕСТВЕННИКИ',
-    'search.travelers.value': '2 взрослых · 0 детей',
     'search.button': 'ПОДОБРАТЬ ТУР',
+    'search.opt.samarkand': 'Самарканд',
+    'search.opt.bukhara': 'Бухара',
+    'search.opt.khiva': 'Хива',
+    'search.opt.tashkent': 'Ташкент',
+    'search.opt.antalya': 'Анталия, Турция',
+    'search.msg.greeting': 'Здравствуйте! Хочу подобрать тур.',
+    'search.msg.destination': 'Направление',
+    'search.msg.checkin': 'Заезд',
+    'search.msg.checkout': 'Выезд',
+    'search.msg.travelers': 'Путешественников',
 
     'marquee.samarkand': 'САМАРКАНД',
     'marquee.bukhara': 'БУХАРА',
@@ -297,12 +311,19 @@ const t = {
     'search.destination.label': "YO'NALISH",
     'search.destination.placeholder': 'Qayerga boramiz?',
     'search.checkin.label': 'KELISH SANASI',
-    'search.checkin.placeholder': 'Sanani tanlang',
     'search.checkout.label': 'KETISH SANASI',
-    'search.checkout.placeholder': 'Sanani tanlang',
     'search.travelers.label': 'SAYOHATCHILAR',
-    'search.travelers.value': '2 kattalar · 0 bolalar',
     'search.button': 'TUR TANLASH',
+    'search.opt.samarkand': 'Samarqand',
+    'search.opt.bukhara': 'Buxoro',
+    'search.opt.khiva': 'Xiva',
+    'search.opt.tashkent': 'Toshkent',
+    'search.opt.antalya': 'Antalya, Turkiya',
+    'search.msg.greeting': 'Salom! Sayohat tanlamoqchiman.',
+    'search.msg.destination': "Yo'nalish",
+    'search.msg.checkin': 'Kelish sanasi',
+    'search.msg.checkout': 'Ketish sanasi',
+    'search.msg.travelers': 'Sayohatchilar soni',
 
     'marquee.samarkand': 'SAMARQAND',
     'marquee.bukhara': 'BUXORO',
@@ -405,6 +426,11 @@ const t = {
     'meta.title': "MIRA-LUX — 2009-yildan beri chegarasiz sayohat",
   },
 };
+
+export function translate(lang, key) {
+  const dict = t[lang] || t[DEFAULT_LANG];
+  return dict[key] ?? t.en[key] ?? key;
+}
 
 export function applyLanguage(lang) {
   const dict = t[lang] || t[DEFAULT_LANG];

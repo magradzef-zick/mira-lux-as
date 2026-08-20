@@ -114,37 +114,35 @@
 
       <!-- Search bar -->
       <div class="relative z-10 max-w-[1600px] mx-auto w-full px-6 md:px-10 -mb-8 md:-mb-9">
-        <div data-reveal class="search-bar grid grid-cols-2 md:grid-cols-[1.3fr_1fr_1fr_1.1fr_auto] gap-px rounded-2xl overflow-hidden">
-          <div class="search-field">
+        <form id="search-form" data-reveal class="search-bar grid grid-cols-2 md:grid-cols-[1.3fr_1fr_1fr_1.1fr_auto] gap-px rounded-2xl overflow-hidden">
+          <label class="search-field">
             <span class="field-label" data-i18n="search.destination.label">DESTINATION</span>
             <div class="flex items-center justify-between gap-2">
-              <span class="text-cream/40 text-sm" data-i18n="search.destination.placeholder">Where to?</span>
-              <svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor" class="text-gold shrink-0"><path d="M128,16a88.1,88.1,0,0,0-88,88c0,75.3,80,132.17,83.41,134.55a8,8,0,0,0,9.18,0C136,236.17,216,179.3,216,104A88.1,88.1,0,0,0,128,16Zm0,120a32,32,0,1,1,32-32A32,32,0,0,1,128,136Z"/></svg>
+              <select id="search-destination" class="search-control">
+                <option value="" data-i18n="search.destination.placeholder">Where to?</option>
+                <option data-i18n="search.opt.samarkand">Samarkand</option>
+                <option data-i18n="search.opt.bukhara">Bukhara</option>
+                <option data-i18n="search.opt.khiva">Khiva</option>
+                <option data-i18n="search.opt.tashkent">Tashkent</option>
+                <option data-i18n="search.opt.antalya">Antalya, Turkey</option>
+              </select>
+              <svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor" class="text-gold shrink-0 pointer-events-none"><path d="M128,16a88.1,88.1,0,0,0-88,88c0,75.3,80,132.17,83.41,134.55a8,8,0,0,0,9.18,0C136,236.17,216,179.3,216,104A88.1,88.1,0,0,0,128,16Zm0,120a32,32,0,1,1,32-32A32,32,0,0,1,128,136Z"/></svg>
             </div>
-          </div>
-          <div class="search-field">
+          </label>
+          <label class="search-field">
             <span class="field-label" data-i18n="search.checkin.label">CHECK-IN</span>
-            <div class="flex items-center justify-between gap-2">
-              <span class="text-cream/40 text-sm" data-i18n="search.checkin.placeholder">Select date</span>
-              <svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor" class="text-gold shrink-0"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg>
-            </div>
-          </div>
-          <div class="search-field">
+            <input type="date" id="search-checkin" class="search-control" />
+          </label>
+          <label class="search-field">
             <span class="field-label" data-i18n="search.checkout.label">CHECK-OUT</span>
-            <div class="flex items-center justify-between gap-2">
-              <span class="text-cream/40 text-sm" data-i18n="search.checkout.placeholder">Select date</span>
-              <svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor" class="text-gold shrink-0"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg>
-            </div>
-          </div>
-          <div class="search-field">
+            <input type="date" id="search-checkout" class="search-control" />
+          </label>
+          <label class="search-field">
             <span class="field-label" data-i18n="search.travelers.label">TRAVELERS</span>
-            <div class="flex items-center justify-between gap-2">
-              <span class="text-cream/85 text-sm" data-i18n="search.travelers.value">2 Adults · 0 Children</span>
-              <svg width="12" height="8" viewBox="0 0 12 8" fill="currentColor" class="text-cream/50 shrink-0"><path d="M1 1L6 6L11 1"/></svg>
-            </div>
-          </div>
-          <button class="btn-gold justify-center !rounded-none md:!rounded-r-2xl px-8" data-magnetic data-i18n="search.button">EXPLORE JOURNEYS</button>
-        </div>
+            <input type="number" id="search-travelers" class="search-control" min="1" max="20" value="2" />
+          </label>
+          <button type="submit" class="btn-gold justify-center !rounded-none md:!rounded-r-2xl px-8" data-magnetic data-i18n="search.button">EXPLORE JOURNEYS</button>
+        </form>
       </div>
     </section>
 
